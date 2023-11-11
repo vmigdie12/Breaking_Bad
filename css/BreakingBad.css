@@ -1,0 +1,186 @@
+/************************************************************/
+/*         stylesheet for Breaking Bad tribute site         */
+/*         Author: Victor de Miguel Diez                    */
+/*         version: 1.0                                     */
+/*         comment: project for Leguajes de Marcas - 1DAM   */
+/************************************************************/
+
+@font-face {
+    font-family: titulo;
+    src: url(../fonts/Supernova\ -\ Personal\ Used.ttf);
+}
+@font-face {
+    font-family: textonormal;
+    src: url(../fonts/Giuconda\ Regular.ttf);
+}
+@font-face {
+    font-family: textotitulo;
+    src: url(../fonts/Snowfall\ Crystals.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: yellow;
+    margin: 0;
+    padding: 1%;
+    font-family: sans-serif;
+    background-image:url(../img/fondo.avif);
+    background-size: cover;
+}
+
+.responsive-image {
+    max-width: 60%;
+        display: block; 
+        margin: 5vh auto;   
+}
+
+#wrapper {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 3%;
+}
+
+h1 {
+    font-family: titulo;
+    text-align: center;
+    border-bottom: 5px solid #E1A925;
+    padding: 10px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 5px #E1A925;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-family: textotitulo;
+    text-align: center;
+    border-bottom: 5px solid #E1A925;
+    padding: 10px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 5px #E1A925;
+    font-size: 2.5em;
+}
+
+p{
+    font-family: textonormal;
+    font-size: 1.5em;
+}
+
+header {
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Otros estilos para el layout, navbar, sections, footer, etc. */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E1A925;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #E1A925;
+}
+
+nav {
+    background-color: #333; 
+    padding: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #026525; 
+}
+
+footer {
+    background-color: #1a1919;
+    color: #fff;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    color:#E1A925; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #E1A925; 
+}
+
+footer img {
+    max-width: 150px;
+    height: auto;
+    margin: auto;
+}
+@media only screen and (max-width: 900px) {
+    /* responsive */
+    h1, h2 {
+        width: 100%;
+        font-size: 1.6em;
+    }
+    body {
+        font-size: 1.4em;
+    }
+    footer {
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* responsive movil */
+    h1, h2 {
+        width: 100%;
+        font-size: 1.4em
+    }
+
+    #wrapper {
+        width: 100%;
+    }
+
+    body {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+}
