@@ -5,9 +5,10 @@
 /*         comment: project for Leguajes de Marcas - 1DAM   */
 /************************************************************/
 
+/* Aqui añadimos las fonts con un nombre para su uso más adelante */
 @font-face {
     font-family: titulo;
-    src: url(../fonts/Supernova\ -\ Personal\ Used.ttf);
+    src: url(../fonts/Averia\ Serif\ Libre.ttf);
 }
 @font-face {
     font-family: textonormal;
@@ -18,9 +19,7 @@
     src: url(../fonts/Snowfall\ Crystals.ttf);
 }
 
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 body {
     background-color: yellow;
@@ -74,6 +73,30 @@ header {
     padding: 100px 0;
 }
 
+/* Sección de las temporadas con grid e imagenes */
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.col-4 {
+    padding: 4%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.col-4 img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+}
+.col-4 p {
+    margin-top: 10px;
+}
+
 /* Otros estilos para el layout, navbar, sections, footer, etc. */
 
 .btn {
@@ -118,13 +141,22 @@ a:hover {
     color: #026525; 
 }
 
+/* footer con grid */
+
 footer {
     background-color: #1a1919;
     color: #fff;
     padding:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    gap: 10px;
+}
+
+.col-3{
+    text-align: center;
 }
 
 footer a {
@@ -141,7 +173,7 @@ footer a:hover {
 
 footer p {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     color: #E1A925; 
 }
@@ -151,8 +183,10 @@ footer img {
     height: auto;
     margin: auto;
 }
+
+/* Responsive */
+
 @media only screen and (max-width: 900px) {
-    /* responsive */
     h1, h2 {
         width: 100%;
         font-size: 1.6em;
