@@ -6,110 +6,234 @@
     <title>Breaking Bad Fan Page</title>
     <link rel="stylesheet" href="./css/BreakingBad.css">
     <link rel="shortcut icon" href="./img/favicooon.png" type="image/x-icon">
+    <script src="./js/sidenav.js"></script>
 </head>
 <body>
     <div id="wrapper">
+
         <!-- Navbar -->
-        <nav>
-            <ul>
-                <li><a href="./BreakingBad.html">Inicio</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#series-relacionadas">Series relacionadas </a></li>
-                <li><a href="#tienda">Tienda</a></li>
-                <li><a href="#caso-español">Breaking Bad caso español</a></li> <!-- Esto sera un link a otra pagina relacionada donde explicare un caso que sucedio en españa hace unos años que se parece bastante a la serie -->
-            </ul>
-        </nav>
+        <div id = "barra">
+            <nav>
+                <ul>
+                    <li><a href="./BreakingBad.html">Home</a></li>
+                    <li><a href="https://www.breakingbadstore.com/" target="_blank">Store</a></li>
+                    <li><a href="#introduccion">Introduction</a></li>
+                    <li><a href="#personajes">Characters</a></li>
+                    <li><a href="#episodios">Seasons</a></li>
+                    <li><a href="#casoESP">Breaking Bad Spanish Case</a></li> 
+                </ul>
+            </nav>
+        </div>
+
+        <!-- SideNavbar -->
+        <div id="mySidenav" class="sidenav">
+            <nav>
+                <a href="javascript:void(0)" class="closebtn" id="cerrar" onclick="closeNav()">&times;</a>
+                <a href="./BreakingBad.html">Home</a>
+                <a href="https://www.breakingbadstore.com/" target="_blank">Store</a>
+                <a href="#introduccion">Introduction</a>
+                <a href="#personajes">Characters</a>
+                <a href="#episodios">Seasons</a>
+                <a href="#casoESP">Breaking Bad Spanish Case</a> 
+            </nav>
+            <span id="hamburguesa" onclick="openNav()">&#9776;</span>
+        </div>
 
         <!-- Hero Section -->
         <header>
             <h1>Breaking Bad</h1>
             <img id="brakingbad" src="./img/brakingbad.jpg" alt="breaking bad" class="responsive-image">
-            <a href="#" class="btn">Más información</a>
+            <a href="https://www.sonypictures.com/tv/breakingbad" class="btn"  target="_blank">Visit the official web</a>
         </header>
 
         <!-- Secciones Intermedias -->
         <section id="introduccion">
-            <h2>Introducción</h2>
+            <h2>Introduction</h2>
             <p>
-                Breaking Bad es una serie de televisión estadounidense creada por Vince Gilligan, que se emitió entre 2008 y 2013. La trama se centra en Walter White, un profesor de química de secundaria que, después de ser diagnosticado con cáncer, decide ingresar al mundo del tráfico de metanfetaminas para poder asegurar el futuro financiero de su familia e intentar tratar con su cancer. Junto a Jesse Pinkman, un antiguo estudiante suyo y traficante de drogas, Walter se convierte en uno de los más reconocidos cocineros de metanfetaminas que es llamado por el apodo "Heisenberg".</p>
+                Breaking Bad is an American television series created by Vince Gilligan, which aired between 2008 and 2013. The series premiered on January 20, 2008 and is a production of Sony Pictures Television. Breaking Bad has been enthusiastically acclaimed by many critics and the public and is considered one of the best television series of all time. In the United States and Canada it was broadcast on the AMC network, and in 2013 it was one of the most watched cable television programs there.</p>
             <p>
-                - Aqui tambien añadiremos mas información relacionada con la introduccion de la serie. </p>
+                Breaking Bad follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire to secure his family's financial security, White chooses to enter a dangerous world of drugs and crime and ascends to power in the world. The series explores how a fatal diagnosis such as White's releases a typical man from the daily concerns and constraints of normal society and follows his transformation from mild family man to a kingpin of the drug trade. </p>
+            <!-- Accordion con trailer de la serie -->
+            <button class="accordion">Watch the trailer!!</button>
+            <div class="panel">
+                <div id = "video" class="container2">
+                    <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/HhesaQXLuRY?si=7xsH9EQQPTAoelpZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <script src="./js/accordion.js"></script>
         </section>
-
+        <!-- Seccion de personajes con un Slideshow con imagenes de cada uno -->
         <section id="personajes">
-            <h2>Personajes</h2>
+            <h2>Characters</h2>
             <p>
-                <b>Walter White (Bryan Cranston):</b> Profesor de química diagnosticado con cáncer terminal. Se convierte en el fabricante de metanfetaminas conocido como "Heisenberg" para asegurar el futuro financiero de su familia.</p>
+                <b>Walter White (Bryan Cranston):</b> Chemistry professor diagnosed with terminal cancer. He becomes the meth cook known as "Heisenberg" to secure his family's financial future.</p>
+            <!-- Slideshow -->
+            <div class="slider">
+                <ul>
+                    <li>
+                    <img src="./img/walter1.png" alt="">
+                    </li>
+                    <li>
+                    <img src="./img/walter2.png" alt="">
+                    </li>
+                    <li>
+                    <img src="./img/walter3.png" alt="">
+                    </li>
+                    <li>
+                    <img src="./img/walter4.png" alt="">
+                    </li>
+                </ul>
+            </div>
             <p>
-                <b>Jesse Pinkman (Aaron Paul):</b> Exalumno de Walter y socio en la fabricación de metanfetaminas. Inicialmente un traficante de drogas, Jesse lucha con su moralidad a lo largo de la serie.</p>
+                <b>Jesse Pinkman (Aaron Paul):</b> Walter's former student and partner in methamphetamine manufacturing. Initially a drug dealer, Jesse struggles with his morality throughout the series.</p>
+            <!-- Slideshow -->
+            <div class="slider">
+                <ul>
+                    <li>
+                    <img src="./img/Jesse1.png" alt="">
+                    </li>
+                    <li>
+                    <img src="./img/Jesse2.png" alt="">
+                    </li>
+                    <li>
+                    <img src="./img/Jesse3.png" alt="">
+                    </li>
+                    <li>
+                    <img src="./img/Jesse4.png" alt="">
+                    </li>
+                </ul>
+            </div>
             <p>
-                <b>Skyler White (Anna Gunn):</b> Esposa de Walter, que inicialmente desconoce las actividades ilegales de su esposo. Con el tiempo, se involucra en el negocio de Walter y se ve afectada por las consecuencias.</p>
+                <b>Skyler White (Anna Gunn):</b> Walter's wife, who is initially unaware of her husband's illegal activities. She eventually becomes involved in Walter's business and is affected by the consequences.</p>
+                <!-- Slideshow -->
+                <div class="slider">
+                    <ul>
+                        <li>
+                        <img src="./img/Skyler1.jpg" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/Skyler2.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/Skyler3.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/Skyler4.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
             <p>
-                <b>Hank Schrader (Dean Norris):</b> Cuñado de Walter y agente de la DEA. A lo largo de la serie, Hank investiga activamente el tráfico de drogas, sin darse cuenta de la participación de su cuñado en la actividad criminal.</p>
+                <b>Hank Schrader (Dean Norris):</b> Walter's brother-in-law and DEA agent. Throughout the series, Hank actively investigates drug trafficking, unaware of his brother-in-law's involvement in criminal activity.</p>
+                <!-- Slideshow -->
+                <div class="slider">
+                    <ul>
+                        <li>
+                        <img src="./img/hank1.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/hank2.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/hank3.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/hank4.png" alt="">
+                        </li>
+                    </ul>
+                </div>
             <p>
-                <b>Saul Goodman (Bob Odenkirk):</b> Un astuto abogado criminal conocido por sus métodos poco convencionales. Se convierte en el abogado de Walter y Jesse y más tarde protagoniza su propio spin-off, "Better Call Saul".</p>
-            <p>
-                <b>Gus Fring (Giancarlo Esposito):</b> Un respetado y astuto narcotraficante que opera con una fachada de empresario legítimo. Gus se convierte en un poderoso adversario de Walter y Jesse.</p>
-            <p>
-                - Aqui tambien añadiremos un poco más de información relacionadas con los personajes de la serie e alguna imagenes.</p>
+                <b>Saul Goodman (Bob Odenkirk):</b> A cunning criminal lawyer known for his unconventional methods. He becomes Walter and Jesse's lawyer and later stars in his own spin-off, "Better Call Saul".</p>
+                <!-- Slideshow -->
+                <div class="slider">
+                    <ul>
+                        <li>
+                        <img src="./img/Saul1.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/Saul2.png" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/Saul3.jpg" alt="">
+                        </li>
+                        <li>
+                        <img src="./img/Saul4.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
         </section>
         <!-- Seccion de episodios con un grid para añadir las temporadas con una imagen -->
         <section id="episodios">
-            <h2>Episodios</h2>
+            <h2>Seasons</h2>
             <div class="grid-4">
                 <div class="col-4">
-                    <p>Temporada 1:</p>
+                    <p>Season 1:</p>
                     <img src="./img/s1.jpeg" alt="">
                     <br>
                     <br>    
-                    Con 7 episodios.
+                    With 7 episodes.
                     <br>
                     <br>
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="https://breakingbad.fandom.com/es/wiki/Primera_temporada_(Breaking_Bad)" target="_blank"class="btn">See more</a>
                 </div>
                 <div class="col-4">
-                    <p>Temporada 2:</p>
+                    <p>Season 2:</p>
                     <img src="./img/s2.jpg" alt="">
                     <br>
                     <br>    
-                    Con 13 episodios.
+                    With 13 episodes.
                     <br>
                     <br>
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="https://breakingbad.fandom.com/es/wiki/Segunda_temporada_(Breaking_Bad)" target="_blank" class="btn">See more</a>
                 </div>
                 <div class="col-4">
-                    <p>Temporada 3:</p>
+                    <p>Season 3:</p>
                     <img src="./img/s3.jpg" alt="">
                     <br>
                     <br>    
-                    Con 13 episodios.
+                    With 13 episodes.
                     <br>
                     <br>
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="https://breakingbad.fandom.com/es/wiki/Tercera_temporada_(Breaking_Bad)" target="_blank" class="btn">See more</a>
                 </div>
                 <div class="col-4">
-                    <p>Temporada 4:</p>
+                    <p>Season 4:</p>
                     <img src="./img/s4.jpg" alt="">
                     <br>
                     <br>    
-                    Con 13 episodios.
+                    With 13 episodes.
                     <br>
                     <br>
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="https://breakingbad.fandom.com/es/wiki/Cuarta_temporada_(Breaking_Bad)" target="_blank" class="btn">See more</a>
                 </div>
                 <div class="col-4">
-                    <p>Temporada 5:</p>
+                    <p>Season 5:</p>
                     <img src="./img/s5.jpg" alt="">
                     <br>
                     <br>    
-                    Con 16 episodios.
+                    With 16 episodes.
                     <br>
                     <br>
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="https://breakingbad.fandom.com/es/wiki/Quinta_temporada_(Breaking_Bad)" target="_blank" class="btn">See more</a>
                 </div>
             </div>
         </section>
-        <br>
+        <section id="casoESP">
+            <h2>Breaking Bad Spanish Case</h2>
+            <div class="grid-2">
+                <div class="col-2">
+                    <p>
+                        In 1995, a professor of organic chemistry at the Faculty of Pharmacy in Salamanca (Marcial Sánchez González) set up a laboratory in Zamora and synthesized a substance very similar to ecstatic, but a little stronger, and distributed it throughout the cod route. Just like what happened in the series, the product he sold was a little better and also had a different appearance than the competition.</p>
+                    <p> 
+                        Of course, he was arrested, but the case did not end there because the professor returned to cooking when he got out of prison and was caught again in 2003. This time he was caught red-handed, ready to prepare 36,000 MDMA pills. This time, as he himself stated, he did it out of spite towards the society that had treated him badly. </p>
+                </div>
+                <div class="col-2">
+                    <div class="container" >
+                        <img src="./img/casoESP.jpg" alt="" class="image">
+                        <div class="overlay"><a href="https://elpais.com/diario/1995/09/27/sociedad/812156401_850215.html" target="_blank">More info</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <br>
         <br>
         <br>
@@ -119,32 +243,48 @@
                 <div class="col-3">
                     <img src="./img/footerbb.jpg" alt="">
                     <br>
-                    <a href="mailto:victordemiguel10@gmail.com">Contacto</a><!--más adelante añadire los links a sus respectivas redes sociales-->
+                    <br>
+                    <ul>
+                        <li id="contacto"><a href="https://www.instagram.com" target="_blank"><img src="./img/instagram.png" alt=""></a></li>
+                        <li id="contacto"><a href="https://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt=""></a></li>
+                        <li id="contacto"><a href="https://twitter.com" target="_blank"><img src="./img/gorjeo.png" alt=""></a></li>
+                        <li id="contacto"><a href="mailto:victordemiguel10@gmail.com" target="_blank"><img src="./img/gmail.png" alt=""></a></li>
+                        <li id="contacto"><a href="https://www.youtube.com" target="_blank"><img src="./img/youtube.png" alt=""></a></li>
+                    </ul>
                 </div>
                 <div class="col-3">
                     <!--barra de navegación repetida-->
                     <ul>
-                        <li><a href="./BreakingBad.html">Inicio</a></li>
+                        <li><a href="./BreakingBad.html">Home</a></li>
                         <br>
-                        <li><a href="#novedades">Novedades</a></li>
+                        <li><a href="https://www.breakingbadstore.com/" target="_blank">Store</a></li>
                         <br>
-                        <li><a href="#series-relacionadas">Series relacionadas </a></li>
+                        <li><a href="#introduccion">Introduction</a></li>
                         <br>
-                        <li><a href="#tienda">Tienda</a></li>
+                        <li><a href="#personajes">Characters</a></li>
                         <br>
-                        <li><a href="#caso-español">Breaking Bad caso español</a></li> <!-- Esto sera un link a otra pagina relacionada donde explicare un caso que sucedio en españa hace unos años que se parece bastante a la serie -->
+                        <li><a href="#episodios">Seasons </a></li>
+                        <br>
+                        <li><a href="#casoESP">Breaking Bad Spanish Case</a></li> 
                     </ul>
                 </div>
                 <div class="col-3">
-                    <p>Pagina web realizada por: <br>
-                    Víctor de Miguel Díez<br>
+                    <p>Web page made by:<br>
+                    Victor de Miguel Diez<br>
                     Lenguajes de Marca<br>
                     1º DAM<br></p>
-                    <a href="#disclaimer">Disclaimer</a> <!-- link a una subpágina que desarrollare para acreditar el origen de 
-                        los medios utilizados (copyright, copyleft, cc, autoría, etc). -->
+                    <a id="myBtn">Disclaimer </a>
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>This page is a class work of a Higher Degree in Multiplatform Application Development, specifically of the subject markup language, all rights are reserved by the official author of the series and the various distributors of the same.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
